@@ -29,6 +29,8 @@ class Board: UIView {
     @IBOutlet weak var sevenImageView: UIImageView!
     @IBOutlet weak var eightImageView: UIImageView!
     
+    var game: Game!
+    
     var position: Int!
     var winner: Player!
     
@@ -55,14 +57,17 @@ class Board: UIView {
         addSubview(contentView)
         contentView.constrainEdges(to: self)
         setupImages()
+        self.game = Game()
     }
+    
+    
     
 }
 
 // MARK: - Setup
 extension Board {
     
-    func setupImages() {
+    func setupImages() { //gives each UIImageview in Board a gesture recognizer
         var tag = 0
         for imageView in all {
             imageView.tag = tag
@@ -80,14 +85,16 @@ extension Board {
 // MARK: - Player Turn
 extension Board {
     
-    func playTurn(sender: UITapGestureRecognizer) {
-        let imageView = sender.view as! UIImageView
-        let player = delegate.playerTurn(board: self, position: imageView.tag)
-        imageView.removeGestureRecognizer(sender)
+    func playTurn(sender: UITapGestureRecognizer) { //gets an input from gesture recognizer
+        var imageView = sender.view as! UIImageView //lets a UIImageView send the input
+        let player = delegate.playerTurn(board: self, position: imageView.tag) //gets an x or o from PlayerTurn fn
+        imageView.removeGestureRecognizer(sender) //?????
+       // if game.playerHasMoved {imageView = all[game.lastMove] }
         animateTurn(imageView: imageView, player: player)
+        if let myWinner = game.checkWin() { win(for: myWinner) }
     }
     
-    func animateTurn(imageView: UIImageView, player: Player) {
+    func animateTurn(imageView: UIImageView, player: Player) { //animates!
         imageView.alpha = 0.0
         imageView.image = player.image
         UIView.animate(withDuration: 0.3, animations: {
@@ -121,6 +128,14 @@ extension Board {
     }
 }
 
+//assigns a game to the board.
+/*extension Board {
+    func makeGame () {
+        let game = Game()
+    
+        //return Game (self)
+    }
+}*/
 
 extension UIView {
     

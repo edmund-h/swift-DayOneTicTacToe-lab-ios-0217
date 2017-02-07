@@ -27,29 +27,29 @@ class ViewController: UIViewController, BoardDelegate {
     }
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSetup()
     }
     
-    func initialSetup() {
+    func initialSetup() { //sets up each board with a .position property equal to their numbered name
         var boardPosition = 0
         for board in allBoards {
             board.position = boardPosition
             board.delegate = self
+            //board.makeGame()
             boardPosition += 1
         }
     }
     
     func playerTurn(board: Board, position: Int) -> Player {
+        //board.setSquare(myLocation: position, myPlayer: .x )
         
-        
-        
-        return .x
+        return board.game.setSquare(myLocation: position)
         
         
         
     }
-    
-    
 }

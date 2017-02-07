@@ -15,6 +15,7 @@
 		7DB90E061E4820B6004B5CF6 /* Board.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DB90E051E4820B6004B5CF6 /* Board.xib */; };
 		7DB90E081E482117004B5CF6 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB90E071E482117004B5CF6 /* Board.swift */; };
 		7DB90E0A1E482BC8004B5CF6 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB90E091E482BC8004B5CF6 /* Player.swift */; };
+		8857C7D41E48D0F10037CADD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857C7D31E48D0F10037CADD /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		7DB90E051E4820B6004B5CF6 /* Board.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Board.xib; sourceTree = "<group>"; };
 		7DB90E071E482117004B5CF6 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		7DB90E091E482BC8004B5CF6 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		8857C7D31E48D0F10037CADD /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				7DB90E051E4820B6004B5CF6 /* Board.xib */,
 				7DB90E071E482117004B5CF6 /* Board.swift */,
 				7DB90E091E482BC8004B5CF6 /* Player.swift */,
+				8857C7D31E48D0F10037CADD /* Game.swift */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			files = (
 				7DB90E0A1E482BC8004B5CF6 /* Player.swift in Sources */,
 				7DB90DF61E481FE7004B5CF6 /* ViewController.swift in Sources */,
+				8857C7D41E48D0F10037CADD /* Game.swift in Sources */,
 				7DB90DF41E481FE7004B5CF6 /* AppDelegate.swift in Sources */,
 				7DB90E081E482117004B5CF6 /* Board.swift in Sources */,
 			);
@@ -314,6 +318,7 @@
 				7DB90E041E481FE7004B5CF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

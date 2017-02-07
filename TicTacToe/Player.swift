@@ -23,4 +23,12 @@ enum Player {
         }
     }
     
+    var string: String{
+        switch self {
+        case .o:
+            return "o"
+        case .x:
+            return "x"
+        }
+    }
 }
