@@ -108,6 +108,8 @@ extension Board {
 extension Board {
     
     func win(for player: Player) {
+        winner = player
+        
         let winningView = UIView(frame: frame)
         winningView.backgroundColor = UIColor.clear
         winningView.translatesAutoresizingMaskIntoConstraints = false
@@ -128,14 +130,6 @@ extension Board {
     }
 }
 
-//assigns a game to the board.
-/*extension Board {
-    func makeGame () {
-        let game = Game()
-    
-        //return Game (self)
-    }
-}*/
 
 extension UIView {
     

@@ -45,7 +45,16 @@ class ViewController: UIViewController, BoardDelegate {
     }
     
     func playerTurn(board: Board, position: Int) -> Player {
-        //board.setSquare(myLocation: position, myPlayer: .x )
+        //beginning of ultimate tictactoe logic
+        var score: [String] = []
+        for myBoard in allBoards {
+            if let myWinner = myBoard.winner {
+                score.append(myWinner.string)
+            } else {score.append ("")}
+            
+        }
+        let metagame = Game ()
+        //more uttt goes here
         
         return board.game.setSquare(myLocation: position)
         
